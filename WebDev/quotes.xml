@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quotes>
+   <quote category='politics'>
+      <text>The great are only great because we are on our knees. Let us rise!</text>
+      <author>
+         <name>Pierre-Joseph Proudhon</name>
+         <dob>1809</dob>
+         <dod>1865</dod>
+         <url>http://en.wikipedia.org/wiki/Pierre-Joseph_Proudhon</url>
+         <img>http://upload.wikimedia.org/wikipedia/commons/e/ea/Portrait_of_Pierre_Joseph_Proudhon_1865.jpg</img>
+      </author>
+   </quote>
+   <quote category='romance'>
+      <text>Take away love and our earth is a tomb.</text>
+      <author>
+         <name>Robert Browning</name>
+         <dob>1812</dob>
+         <dod>1889</dod>
+         <url>http://en.wikipedia.org/wiki/Robert_Browning</url>
+         <img>http://upload.wikimedia.org/wikipedia/commons/4/49/Robert_Browning_1865.jpg</img>
+      </author>
+   </quote>
+   <quote category='humour'>
+      <text>It's not that I'm afraid to die, I just don't want to be there when it happens.</text>
+      <author>
+         <name>Woody Allen</name>
+         <dob>1935</dob>
+         <dod/>
+         <url>http://en.wikipedia.org/wiki/Woddy_Allen</url>
+         <img>http://upload.wikimedia.org/wikipedia/commons/0/0f/Woody_Allen_at_the_premiere_of_Whatever_Works.jpg</img>
+      </author> 
+   </quote>
+</quotes>
