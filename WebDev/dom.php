@@ -1,17 +1,19 @@
 <?php
 class Quote{
-    public $_category = '';
-    public $_quote = '';
-    public $_author = '';
-    public $_date = '';
-    public $_imageUrl = '';
-    
-    public function __construct($category, $quote, $author, $date, $image){
-        $this->$_category = $category;
-        $this->$_quote = $quote;
-        $this->$_author = $author;
-        $this->$_date = $date;
-        $this->$_imageUrl = $image;
+    public function __construct($category, $quote, $author){
+        $this->Category = $category;
+        $this->Quote = $quote;
+        $this->Author = $author;
+    }
+}
+
+class Author {
+    public function __construct($name, $dob, $dod, $url, $image){
+        $this->Name = $name;
+        $this->DOB = $dob;
+        $this->DOD = $dod;
+        $this->Url = $url;
+        $this->Image = $image;
     }
 }
 
@@ -31,8 +33,21 @@ class QuoteParser {
     
     private static function ParseCategory($quoteNode){
         $category = $quoteNode->getAttribute('category');
-                
-        return new Quote($category, '', '', '', '');
+        $text = $quoteNode->getElementsByTagName('text')->item(0)->nodeValue;
+        
+        $author = QuoteParser::ParseAuthor($quoteNode->getElementsByTagName('author')->item(0));
+        
+        return new Quote($category, $text, $author);
+    }
+    
+    private static function ParseAuthor($authorNode){
+        $name = $authorNode->getElementsByTagName('name')->item(0)->nodeValue;
+        $dob = $authorNode->getElementsByTagName('dob')->item(0)->nodeValue;
+        $dod = $authorNode->getElementsByTagName('dod')->item(0)->nodeValue;
+        $url = $authorNode->getElementsByTagName('url')->item(0)->nodeValue;    
+        $img = $authorNode->getElementsByTagName('img')->item(0)->nodeValue;
+        
+        return new Author($name, $dob, $dod, $url, $img);
     }
 }
 ?>
@@ -40,7 +55,8 @@ class QuoteParser {
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title></title>
+        <title>DOM Manipulation</title>
+        <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet">
     </head>
     <body>
         <?php
@@ -48,11 +64,27 @@ class QuoteParser {
             
             foreach($quotes as $parsed){
 echo <<<HTML
-     <table>
-                <tr>
-                <th>Category</th>
-                <td>$parsed</td>
-                </tr>
+     <table class="table table-striped">
+        <tr>
+            <th class="col-lg-2">Category</th>
+            <td>{$parsed->Category}</td>
+        </tr>
+        <tr>
+            <th class="col-lg-2">Quote</th>
+            <td>{$parsed->Quote}</td>
+        </tr>
+            <tr>
+            <th class="col-lg-2">Author</th>
+            <td><a href="{$parsed->Author->Url}" title="{$parsed->Author->Name}">{$parsed->Author->Name}</a></td>
+        </tr>
+            <tr>
+            <th class="col-lg-2">Date</th>
+            <td>{$parsed->Author->DOB}-{$parsed->Author->DOD}</td>
+        </tr>
+        <tr>
+            <th class="col-lg-2">Image</th>
+            <td><img src="{$parsed->Author->Image}" alt="{$parsed->Author->Name} title="{$parsed->Author->Name}" class="col-lg-3" /></td>
+        </tr>
      </table>
 HTML;
             }
