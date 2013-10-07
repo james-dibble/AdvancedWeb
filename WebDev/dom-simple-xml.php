@@ -31,7 +31,7 @@ class QuoteParser {
     }
     
     private static function ParseQuote($quoteNode){
-        $category = $quoteNode->attribues['category'];
+        $category = $quoteNode->attributes()->category;
         $text = $quoteNode->text;
         
         $author = QuoteParser::ParseAuthor($quoteNode->author);
@@ -82,7 +82,7 @@ echo <<<HTML
         </tr>
         <tr>
             <th class="col-lg-2">Image</th>
-            <td><img src="{$parsed->Author->Image}" alt="{$parsed->Author->Name} class="col-lg-3" /></td>
+            <td><img src="{$parsed->Author->Image}" alt="{$parsed->Author->Name}" class="col-lg-3 col-md-3" /></td>
         </tr>
      </table>
 HTML;
