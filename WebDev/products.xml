@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<shop>
+    <categories>
+        <category category_id="7"><![CDATA[Health & Beauty]]></category>
+        <category category_id="3"><![CDATA[Jewellery]]></category>
+        <category category_id="2"><![CDATA[Shoes]]></category>
+        <category category_id="5"><![CDATA[Accessories]]></category>
+    </categories>
+    <products>
+        <product product_id="1750">
+            <product_categories>
+                <category>3</category>
+                <category>5</category>
+            </product_categories>
+            <name>Bracelet</name>
+            <description>
+            <![CDATA[Silver @M Gold Plated 8mm Ball Bracelet 7.13cm]]>
+            </description>
+            <rrp>100.34</rrp>
+            <price>37.62</price>
+            <manufacturer></manufacturer>
+            <image>http://www.cems.uwe.ac.uk/~p-chatterjee/images/bracelet_1750.jpg</image>
+            <keywords>
+                <keyword>bracelet</keyword>
+                <keyword>silver</keyword>
+                <keyword>gold_plated</keyword>
+            </keywords>
+        </product>
+        <product product_id="3210">
+            <product_categories>
+                <category>7</category>
+            </product_categories>
+            <name><![CDATA[CHANEL No.5 Eau de Parfum Spray  - 50ml]]></name>
+            <description>
+            <![CDATA[Chanel No. 5 is classified as a refined, floral, soft fragrance. A bouquet of abstract flowers with an indefinable femininity.]]>
+            </description>
+            <rrp>92.00</rrp>
+            <price>82.95</price>
+            <manufacturer>Chanel</manufacturer>
+            <image>http://www.cems.uwe.ac.uk/~p-chatterjee/images/perfume_3210.jpg</image>
+            <keywords>
+                <keyword>perfume</keyword>
+                <keyword>perfume_spary</keyword>
+                <keyword>chanel_no_5</keyword>
+            </keywords>
+        </product>
+        <product product_id="6133">
+            <product_categories>
+                <category>2</category>
+            </product_categories>
+            <name><![CDATA[Philippa 3 Mary Janes]]></name>
+            <description>
+            <![CDATA[Hush puppies philippa 3 is a great work shoe as it is on a comfortable mid heel and softly rounded toe shape.]]>
+            </description>
+            <rrp></rrp>
+            <price>54.99</price>
+            <manufacturer>Hush Puppies</manufacturer>
+            <image>http://www.cems.uwe.ac.uk/~p-chatterjee/images/shoes_6133.jpg</image>
+            <keywords>
+                <keyword>heels</keyword>
+                <keyword>black_leather</keyword>
+                <keyword>kitten_heels</keyword>
+                <keyword>leather</keyword>
+            </keywords>
+        </product>
+    </products>
+</shop>
